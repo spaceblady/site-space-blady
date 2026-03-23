@@ -2,263 +2,150 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Space Blady</title>
-  <meta
-    name="description"
-    content="Criação de sites profissionais, páginas estratégicas e estrutura digital para negócios."
-  />
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      background: linear-gradient(180deg, #07111f 0%, #0b1f38 100%);
-      min-height: 100vh;
-      color: #0f172a;
+      background: linear-gradient(180deg, #07111f, #0b1f38);
       display: flex;
       justify-content: center;
-      padding: 24px 14px;
+      padding: 20px;
     }
 
     .page {
       width: 100%;
-      max-width: 620px;
-      background: linear-gradient(180deg, #0ea5e9 0%, #38bdf8 100%);
-      border-radius: 28px;
+      max-width: 600px;
+      background: linear-gradient(180deg, #0ea5e9, #38bdf8);
+      border-radius: 25px;
       overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
     }
 
     .hero {
-      padding: 34px 24px 26px;
       text-align: center;
-      background: linear-gradient(180deg, #38bdf8 0%, #7dd3fc 100%);
+      padding: 30px 20px;
     }
 
-    .logo-wrap {
-      width: 130px;
-      height: 130px;
-      margin: 0 auto 18px;
+    .logo {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.22);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 4px solid rgba(255, 255, 255, 0.75);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-      overflow: hidden;
-    }
-
-    .logo-wrap img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 15px;
     }
 
-    .brand-title {
-      font-size: 2.3rem;
-      font-weight: 800;
-      color: #062033;
+    h1 {
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
-    .brand-subtitle {
-      font-size: 1.08rem;
-      color: #10314a;
-      font-weight: 600;
+    .sub {
+      font-size: 16px;
       margin-bottom: 10px;
-    }
-
-    .location {
-      font-size: 0.96rem;
-      color: #17405f;
-      opacity: 0.95;
     }
 
     .content {
-      padding: 26px 18px 34px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 15px;
     }
 
-    .card,
-    .action-card {
-      display: block;
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 18px;
       text-decoration: none;
-      background: #ffffff;
-      border-radius: 22px;
-      padding: 22px 20px;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .action-card:hover,
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 32px rgba(0, 0, 0, 0.14);
-    }
-
-    .action-card.primary {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
-    }
-
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .card-subtitle {
-      font-size: 1rem;
-      opacity: 0.92;
-      font-weight: 600;
-    }
-
-    .simple-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 8px;
-    }
-
-    .simple-text {
-      font-size: 1rem;
-      color: #475569;
-      line-height: 1.5;
-    }
-
-    .simple-text strong {
-      color: #0f172a;
-    }
-
-    .social-card {
+      color: black;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       text-align: center;
     }
 
-    .social-title {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 18px;
+    .card strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 5px;
     }
 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
+    .card p {
+      font-size: 14px;
+      color: #555;
     }
 
-    .social-icons a {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+    .btn-whatsapp {
+      background: #0f172a;
       color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-      box-shadow: 0 10px 18px rgba(37, 99, 235, 0.22);
     }
 
-    .social-desc {
-      color: #64748b;
-      font-size: 0.98rem;
-      font-weight: 600;
+    .btn-email {
+      background: #1e293b;
+      color: white;
+    }
+
+    .info {
+      font-size: 13px;
+      margin-top: 8px;
+      opacity: 0.85;
     }
 
     .footer {
-      background: linear-gradient(90deg, #0f172a, #1d4ed8);
       text-align: center;
-      padding: 22px 14px;
+      padding: 20px;
+      background: #0f172a;
       color: white;
-    }
-
-    .footer p {
-      font-size: 0.98rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .footer span {
-      font-size: 0.92rem;
-      opacity: 0.88;
-    }
-
-    @media (max-width: 540px) {
-      .brand-title {
-        font-size: 1.9rem;
-      }
-
-      .social-title {
-        font-size: 1.5rem;
-      }
-
-      .card-title {
-        font-size: 1.3rem;
-      }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
-    <section class="hero">
-      <div class="logo-wrap">
-        <img src="logo.jpg" alt="Logo Space Blady" />
-      </div>
 
-      <h1 class="brand-title">Space Blady</h1>
-      <p class="brand-subtitle">Criação de sites, landing pages e estrutura digital</p>
-      <p class="location">Atendimento online • Brasil</p>
-    </section>
+    <!-- TOPO -->
+    <div class="hero">
+      <img src="logo.jpg" class="logo">
+      <h1>Space Blady</h1>
+      <p class="sub">Criação de sites profissionais</p>
+    </div>
 
-    <main class="content">
-      <a class="action-card primary" href="https://wa.me/5562981479674" target="_blank">
-        <div class="card-title">WhatsApp</div>
-        <div class="card-subtitle">Atendimento rápido e direto</div>
+    <!-- CONTEÚDO -->
+    <div class="content">
+
+      <!-- WHATSAPP -->
+      <a href="https://wa.me/5562981479674" target="_blank" class="card btn-whatsapp">
+        <strong>WhatsApp</strong>
+        <p>Atendimento rápido e direto</p>
+        <div class="info">(62) 98147-9674</div>
       </a>
 
-      <div class="card">
-        <div class="simple-title">Serviços</div>
-        <div class="simple-text">
-          Sites profissionais, páginas de vendas, landing pages e estrutura digital para negócios.
-        </div>
-      </div>
-
-      <a class="card" href="mailto:spaceblady@gmail.com">
-        <div class="simple-title">E-mail</div>
-        <div class="simple-text">
-          <strong>spaceblady@gmail.com</strong><br />
-          Toque para enviar uma mensagem por e-mail.
-        </div>
+      <!-- EMAIL -->
+      <a href="mailto:spaceblady@gmail.com?subject=Orçamento%20de%20Site&body=Olá,%20vim%20pelo%20site." class="card btn-email">
+        <strong>E-mail</strong>
+        <p>Toque para enviar uma mensagem</p>
+        <div class="info">spaceblady@gmail.com</div>
       </a>
 
+      <!-- SERVIÇOS -->
       <div class="card">
-        <div class="simple-title">Contato</div>
-        <div class="simple-text">
-          Telefone / WhatsApp<br />
-          <strong>(62) 98147-9674</strong>
-        </div>
+        <strong>Serviços</strong>
+        <p>Sites profissionais, landing pages e estrutura digital para negócios.</p>
       </div>
 
-      
-    </main>
+    </div>
 
-    <footer class="footer">
-      <p>© 2026 Space Blady</p>
-      <span>Todos os direitos reservados</span>
-    </footer>
+    <!-- RODAPÉ -->
+    <div class="footer">
+      © 2026 Space Blady<br>
+      Todos os direitos reservados
+    </div>
+
   </div>
 </body>
 </html>
