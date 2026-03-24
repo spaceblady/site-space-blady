@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -102,6 +102,46 @@
       background: #0f172a;
       color: white;
     }
+
+    form.card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+
+    form.card strong,
+    form.card p {
+      text-align: center;
+    }
+
+    form.card input,
+    form.card select,
+    form.card textarea,
+    form.card button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    form.card textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    form.card button {
+      background: #0f172a;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    form.card button:hover {
+      opacity: 0.95;
+    }
   </style>
 </head>
 
@@ -110,7 +150,7 @@
 
     <!-- TOPO -->
     <div class="hero">
-      <img src="logo.jpg" class="logo">
+      <img src="logo.jpg" class="logo" alt="Logo Space Blady">
       <h1>Space Blady</h1>
       <p class="sub">Criação de sites profissionais</p>
     </div>
@@ -132,11 +172,27 @@
         <div class="info">spaceblady@gmail.com</div>
       </a>
 
-      <!-- SERVIÇOS -->
-      <div class="card">
-        <strong>Serviços</strong>
-        <p>Sites profissionais, landing pages e estrutura digital para negócios.</p>
-      </div>
+      <!-- FORMULÁRIO -->
+      <form action="https://formspree.io/f/mgongyed" method="POST" class="card">
+        <strong>Solicitar orçamento</strong>
+        <p>Preencha os dados do seu projeto</p>
+
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="text" name="whatsapp" placeholder="Seu WhatsApp" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+
+        <select name="tipo_site" required>
+          <option value="">Escolha o tipo de site</option>
+          <option value="site-profissional">Site profissional</option>
+          <option value="landing-page">Landing page</option>
+          <option value="loja-virtual">Loja virtual</option>
+          <option value="portfolio">Portfólio</option>
+        </select>
+
+        <textarea name="descricao" placeholder="Descreva como você quer seu site" required></textarea>
+
+        <button type="submit">Enviar formulário</button>
+      </form>
 
     </div>
 
